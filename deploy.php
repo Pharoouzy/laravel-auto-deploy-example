@@ -15,6 +15,7 @@ set('rsync_src', function () {
 
 // Configuring the rsync exclusions.
 // You'll want to exclude anything that you don't want on the production server.
+
 add('rsync', [
     'exclude' => [
         '.git',
