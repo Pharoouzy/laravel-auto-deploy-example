@@ -23,7 +23,7 @@ jobs:
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Composer Dependencies
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+        run: composer install # -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
       - name: Install NPM Dependencies
         run: npm install
       - name: Generate Key
@@ -85,7 +85,7 @@ jobs:
           php-version: 7.4
           extension-csv: mbstring, bcmath
       - name: Composer install
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+        run: composer install # -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
       - name: Setup Deployer
         uses: atymic/deployer-php-action@master
         with:
@@ -114,7 +114,7 @@ jobs:
           php-version: 7.4
           extension-csv: mbstring, bcmath
       - name: Composer install
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+        run: composer install # -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
       - name: Setup Deployer
         uses: atymic/deployer-php-action@master
         with:
