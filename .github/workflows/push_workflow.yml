@@ -39,8 +39,8 @@ jobs:
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Composer Dependencies
         run: composer install # -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
-      - name: Install NPM Dependencies
-        run: npm install
+      # - name: Install NPM Dependencies
+      #   run: npm install
       - name: Generate Key
         run: php artisan key:generate
       - name: Execute tests (Unit and Feature tests) via PHPUnit
@@ -89,11 +89,11 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v1
-      - name: Fetch built assets from Artifacts
-        uses: actions/download-artifact@v1
-        with:
-          name: assets
-          path: public
+      # - name: Fetch built assets from Artifacts
+      #   uses: actions/download-artifact@v1
+      #   with:
+      #     name: assets
+      #     path: public
       - name: Setup PHP
         uses: shivammathur/setup-php@master
         with:
@@ -118,11 +118,11 @@ jobs:
     if: github.ref == 'refs/heads/staging'
     steps:
       - uses: actions/checkout@v1
-      - name: Fetch built assets from Artifacts
-        uses: actions/download-artifact@v1
-        with:
-          name: assets
-          path: public
+      # - name: Fetch built assets from Artifacts
+      #   uses: actions/download-artifact@v1
+      #   with:
+      #     name: assets
+      #     path: public
       - name: Setup PHP
         uses: shivammathur/setup-php@master
         with:
