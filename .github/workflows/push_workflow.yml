@@ -47,8 +47,8 @@ jobs:
         env:
           DB_PORT: ${{ job.services.mysql.ports[3306] }}
         run: vendor/bin/phpunit
-      - name: Execute tests (Unit and Feature tests) via JEST
-        run: node_modules/.bin/jest
+      # - name: Execute tests (Unit and Feature tests) via JEST
+      #   run: node_modules/.bin/jest
   # build-js-production:
   #   name: Build JavaScript/CSS for PRODUCTION Server
   #   runs-on: ubuntu-latest
