@@ -98,7 +98,7 @@ jobs:
         uses: shivammathur/setup-php@master
         with:
           php-version: 7.4
-          extension: mbstring, bcmath
+          extensions: mbstring, bcmath
       - name: Composer install
         run: composer install # -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
       - name: Setup Deployer
@@ -127,7 +127,7 @@ jobs:
         uses: shivammathur/setup-php@master
         with:
           php-version: 7.4
-          extension: mbstring, bcmath
+          extensions: mbstring, bcmath
       - name: Composer install
         run: composer install # -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
       - name: Setup Deployer
